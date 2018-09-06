@@ -22,6 +22,8 @@ socket.on('connect', function() {
       alert(err);
       window.location.href = '/';
     } else {
+      var h3 = jQuery('<h3></h3>').text(`Room: ${params.room.toLowerCase()}`);
+      jQuery('#room-name').html(h3);
       console.log('No error');
     }
   });
